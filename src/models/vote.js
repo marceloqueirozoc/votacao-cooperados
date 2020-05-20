@@ -16,6 +16,12 @@ const VoteSchema = new mongoose.Schema({
         require: true
     },
 
+    assignedTo: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'user',
+        require: true
+    },
+
     createdAt: {
         type: Date,
         default: Date.now,
